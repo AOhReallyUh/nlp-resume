@@ -28,9 +28,6 @@ else:
     # The directory does not exist
     print(f"Directory {directory_path} does not exist.")
 
-# Set the OpenAI client
-client = OpenAI()
-
 # Set API Key
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", 
@@ -38,6 +35,9 @@ with st.sidebar:
                                    type="password", 
                                    value = "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"
                                   )
+
+# Set the OpenAI client
+client = OpenAI(api_key=openai_api_key)
 
 # Set Embeddings Model    
 embeddings = OpenAIEmbeddings()
