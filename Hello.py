@@ -33,7 +33,7 @@ with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", 
                                    key="file_qa_api_key", 
                                    type="password", 
-                                   value = "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"
+                                   value = "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"
                                   )
     
 # Set the LLM Model
@@ -134,7 +134,7 @@ def reading_resume(resume_text):
 def resume_build():
     # Set the OpenAI client
     client = OpenAI(api_key=openai_api_key)
-    
+
     template2 = """You are a bot that generates resumes for users based on your knowledge about the user, 
     using only the context provided and the job description provided.
 
