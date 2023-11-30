@@ -3,3 +3,7 @@ numpy
 pandas
 pydeck
 streamlit
+openai
+PyPDF2
+langchain
+chromadb
