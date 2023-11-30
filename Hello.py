@@ -35,12 +35,6 @@ with st.sidebar:
                                    type="password", 
                                    value = "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"
                                   )
-
-# Set the OpenAI client
-client = OpenAI(api_key=openai_api_key)
-
-# Set Embeddings Model    
-embeddings = OpenAIEmbeddings(api_key=openai_api_key)
     
 # Set the LLM Model
 #model="gpt-3.5-turbo-0613"
@@ -69,6 +63,12 @@ def clean_text(text):
 # Define ChromaDB Function
 @st.cache_resource
 def reading_resume(resume_text):
+    # Set the OpenAI client
+    client = OpenAI(api_key=openai_api_key)
+
+    # Set Embeddings Model    
+    embeddings = OpenAIEmbeddings(api_key=openai_api_key)
+
     # Set the Request for Facts
     request = """
     Using the following resume text, please return a list of all facts and inferred facts about the user
@@ -132,6 +132,9 @@ def reading_resume(resume_text):
 #Define the Template Function
 @st.cache_resource
 def resume_build():
+    # Set the OpenAI client
+    client = OpenAI(api_key=openai_api_key)
+    
     template2 = """You are a bot that generates resumes for users based on your knowledge about the user, 
     using only the context provided and the job description provided.
 
