@@ -33,7 +33,6 @@ with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", 
                                    key="file_qa_api_key", 
                                    type="password", 
-                                   value = "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"
                                   )
     
 # Set the LLM Model
