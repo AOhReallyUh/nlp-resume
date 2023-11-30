@@ -7,3 +7,4 @@ openai
 PyPDF2
 langchain
 chromadb
+sqlite3
