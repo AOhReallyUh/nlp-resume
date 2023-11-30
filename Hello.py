@@ -40,7 +40,7 @@ with st.sidebar:
 client = OpenAI(api_key=openai_api_key)
 
 # Set Embeddings Model    
-embeddings = OpenAIEmbeddings()
+embeddings = OpenAIEmbeddings(api_key=openai_api_key)
     
 # Set the LLM Model
 #model="gpt-3.5-turbo-0613"
